@@ -10,21 +10,64 @@
 </head>
 
 <body>
-    <main>
-        <form id="data-form">
-            <label for="x1-input">Valor x1:</label>
-            <input type="number" id="x1-input" value="0">
-            <label for="y1-input">Valor y1:</label>
-            <input type="number" id="y1-input" value="1">
-            <label for="x2-input">Valor x2:</label>
-            <input type="number" id="x2-input" value="5">
-            <label for="y2-input">Valor y2:</label>
-            <input type="number" id="y2-input" value="2">
-            <label for="x-input">Valor x:</label>
-            <input type="number" id="x-input" value="2">
-        </form>
-        <div id="plot"></div>
-    </main>
+    <header>
+        <h1>Interpolación Lineal</h1>
+    </header>
+    <section class="graphics">
+        <h2 id="graphics-title">Gráfico Interactivo</h2>
+        <div id="graphics-plot">
+            <form id="data-form">
+                <label for="x1-input">Valor <i>x<sub>1</sub></i>:</label>
+                <input type="number" id="x1-input" value="0">
+                <label for="y1-input">Valor <i>y<sub>1</sub></i>:</label>
+                <input type="number" id="y1-input" value="1">
+                <label for="x2-input">Valor <i>x<sub>2</sub></i>:</label>
+                <input type="number" id="x2-input" value="5">
+                <label for="y2-input">Valor <i>y<sub>2</sub></i>:</label>
+                <input type="number" id="y2-input" value="2">
+                <label for="x-input">Valor <i>x</i>:</label>
+                <input type="number" id="x-input" value="2">
+            </form>
+            <div id="plot"></div>
+        </div>
+    </section>
+    <section id="explanation">
+        <article id="explanation-what">
+            <h2>¿Qué es?</h2>
+            <p>
+                Radica en estimar la ubicación de un punto dentro de un intervalo numérico, suponiendo que los valores
+                extremos de dicho intervalo están unidos por una recta. Una vez que se conoce la ecuación de esta recta,
+                es posible ubicar el punto desconocido.
+                <br>
+                <br>
+                También se podría aproximar la curva que une a los puntos dados mediante una función cuadrática u otro
+                polinomio. Sin embargo la recta tiene sencillez matemática, y resulta fácil de manejar, pero siendo la
+                interpolación mas simple, es posible que el resultado no sea tan preciso como el que se obtiene al
+                emplear otras funciones.
+            </p>
+        </article>
+        <article id="explanation-formula">
+            <h2>Fórmula</h2>
+            <p>
+                Similar a la ecuación punto-pendiente de la recta:
+                <br><br>
+                <img src="https://latex.codecogs.com/svg.image?y=y_1&plus;m(x-x_1)" alt="punto-pendiente">
+                <br><br>
+                Donde <i>m</i> es la pendiente, que podemos hallar con los puntos extremos
+                <br><br>
+                <img src="https://latex.codecogs.com/svg.image?m=\frac{y_2-y_1}{x_2-x_1}" alt="pendiente">
+                <br><br>
+                Los puntos extremos son <i>(x<sub>1</sub>, y<sub>1</sub>)</i> y <i>(x<sub>2</sub>, y<sub>2</sub>)</i> y
+                el punto que
+                hallamos al final es
+                <i>(x, y)</i>
+            </p>
+        </article>
+    </section>
+    <footer>
+        <p><b>Universidad Nacional del Altiplano</b></p>
+        <p><i>Ingeniería de Sistemas</i></p>
+    </footer>
 </body>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="./index.js">
