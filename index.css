@@ -27,6 +27,10 @@ h2 {
     text-align: center;
 }
 
+#answer{
+    text-align: center;
+}
+
 #graphics-plot {
     display: flex;
     flex-wrap: wrap;

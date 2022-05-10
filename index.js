@@ -4,6 +4,7 @@ const y1_input = document.getElementById("y1-input");
 const x2_input = document.getElementById("x2-input");
 const y2_input = document.getElementById("y2-input");
 const x_input = document.getElementById("x-input");
+const answer = document.getElementById("answer");
 
 data = [
     {
@@ -54,6 +55,7 @@ const update_data = () => {
     data[0].y = [y1, y2];
     data[1].x = [x];
     data[1].y = [y];
+    answer.textContent = `La respuesta es ${y}`;
 }
 
 const plot = () => {
